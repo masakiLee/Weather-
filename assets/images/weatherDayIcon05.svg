@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="229" height="229" viewBox="0 0 229 229">
+  <defs>
+    <style>
+      .cls-1, .cls-3 {
+        fill: #fff;
+      }
+
+      .cls-1 {
+        opacity: 0;
+      }
+
+      .cls-2 {
+        fill: #ffd939;
+      }
+
+      .cls-4 {
+        filter: url(#联合_8);
+      }
+
+      .cls-5 {
+        filter: url(#联合_9);
+      }
+
+      .cls-6 {
+        filter: url(#月亮);
+      }
+    </style>
+    <filter id="月亮">
+      <feOffset dy="11" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="4" result="blur"/>
+      <feFlood flood-opacity="0.161" result="color"/>
+      <feComposite operator="out" in="SourceGraphic" in2="blur"/>
+      <feComposite operator="in" in="color"/>
+      <feComposite operator="in" in2="SourceGraphic"/>
+    </filter>
+    <filter id="联合_9">
+      <feOffset dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="1" result="blur-2"/>
+      <feFlood flood-opacity="0.161" result="color-2"/>
+      <feComposite operator="out" in="SourceGraphic" in2="blur-2"/>
+      <feComposite operator="in" in="color-2"/>
+      <feComposite operator="in" in2="SourceGraphic"/>
+    </filter>
+    <filter id="联合_8">
+      <feOffset dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="1" result="blur-3"/>
+      <feFlood flood-opacity="0.161" result="color-3"/>
+      <feComposite operator="out" in="SourceGraphic" in2="blur-3"/>
+      <feComposite operator="in" in="color-3"/>
+      <feComposite operator="in" in2="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="weatherDayIcon05" transform="translate(-0.075)">
+    <rect id="矩形_183" data-name="矩形 183" class="cls-1" width="229" height="229" transform="translate(0.075)"/>
+    <g id="组_200" data-name="组 200" transform="translate(0 37.212)">
+      <g data-type="innerShadowGroup">
+        <path id="月亮-2" data-name="月亮" class="cls-2" d="M208.337,283.106A78.157,78.157,0,0,1,130.5,211.881a7.283,7.283,0,0,1,12.831-4.359c.042.062.1.021.1-.145A47.194,47.194,0,0,0,177.921,222.3a47.765,47.765,0,0,0,47.774-47.767,47.181,47.181,0,0,0-15.073-34.627c.021-.021.1-.021.062-.062a7.351,7.351,0,0,1,4.63-12.746,78.159,78.159,0,0,1-6.976,156.006Z" transform="translate(-93.287 -127.1)"/>
+        <g class="cls-6" transform="matrix(1, 0, 0, 1, 0.08, -37.21)">
+          <path id="月亮-3" data-name="月亮" class="cls-3" d="M208.337,283.106A78.157,78.157,0,0,1,130.5,211.881a7.283,7.283,0,0,1,12.831-4.359c.042.062.1.021.1-.145A47.194,47.194,0,0,0,177.921,222.3a47.765,47.765,0,0,0,47.774-47.767,47.181,47.181,0,0,0-15.073-34.627c.021-.021.1-.021.062-.062a7.351,7.351,0,0,1,4.63-12.746,78.159,78.159,0,0,1-6.976,156.006Z" transform="translate(-93.36 -89.89)"/>
+        </g>
+      </g>
+      <g data-type="innerShadowGroup">
+        <path id="联合_9-2" data-name="联合 9" class="cls-3" d="M72.412,59.875A17.527,17.527,0,0,1,70.328,60h-45.2q-.268,0-.533-.008-.314.008-.63.008a23.877,23.877,0,1,1,5.369-47.153A23.988,23.988,0,0,1,74.556,23.265h.008a18.367,18.367,0,1,1,0,36.734A18.688,18.688,0,0,1,72.412,59.875Z" transform="translate(0.075 94.788)"/>
+        <g class="cls-5" transform="matrix(1, 0, 0, 1, 0.08, -37.21)">
+          <path id="联合_9-3" data-name="联合 9" class="cls-3" d="M72.412,59.875A17.527,17.527,0,0,1,70.328,60h-45.2q-.268,0-.533-.008-.314.008-.63.008a23.877,23.877,0,1,1,5.369-47.153A23.988,23.988,0,0,1,74.556,23.265h.008a18.367,18.367,0,1,1,0,36.734A18.688,18.688,0,0,1,72.412,59.875Z" transform="translate(0 132)"/>
+        </g>
+      </g>
+      <g data-type="innerShadowGroup">
+        <path id="联合_8-2" data-name="联合 8" class="cls-3" d="M29.336,47.153A24,24,0,0,1,0,23.878,23.923,23.923,0,0,1,23.967,0q.316,0,.63.008Q24.863,0,25.131,0h45.2a17.524,17.524,0,0,1,2.084.124A18.689,18.689,0,0,1,74.564,0a18.367,18.367,0,1,1,0,36.734h-.008A23.988,23.988,0,0,1,29.336,47.153Z" transform="translate(229.075 117.788) rotate(180)"/>
+        <g class="cls-4" transform="matrix(1, 0, 0, 1, 0.08, -37.21)">
+          <path id="联合_8-3" data-name="联合 8" class="cls-3" d="M29.336,47.153A24,24,0,0,1,0,23.878,23.923,23.923,0,0,1,23.967,0q.316,0,.63.008Q24.863,0,25.131,0h45.2a17.524,17.524,0,0,1,2.084.124A18.689,18.689,0,0,1,74.564,0a18.367,18.367,0,1,1,0,36.734h-.008A23.988,23.988,0,0,1,29.336,47.153Z" transform="translate(229 155) rotate(180)"/>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

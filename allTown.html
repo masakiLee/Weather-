@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>
+    Weather° - allTown
+  </title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" />
+  <link rel="stylesheet" href="./assets/style/all.css">
+</head>
+
+<body>
+
+  <header class="header container-fluid d-flex justify-content-between align-items-center px-4 py-3 bg-white">
+    <a href="#" class="menuIcon">
+      <img src="./assets/images/menu.svg" alt="menuIcon" class="menu d-none d-lg-block">
+      <img src="./assets/images/menu-mobile.svg" alt="menuIcon" class="menu d-block d-lg-none">
+    </a>
+    <h1 class="WeatherIcon">
+      <a href="./index.html" class="logoTag">
+        <img src="./assets/images/Weather °.svg" alt="Weather°" class="Weather d-none d-lg-block">
+        <img src="./assets/images/Weather°-mobile.svg" alt="Weather°" class="Weather d-block d-lg-none">
+      </a>
+    </h1>
+    <div class="sideMask">
+      <div class="sideMenu d-flex flex-column">
+        <div class="title d-flex justify-content-between align-items-center">
+          <a href="./index.html"><img src="./assets/images/Weather °.svg" alt="Weather°" class="sideMenuLogo"></a>
+          <i class="fas fa-times sideMenuIcon"></i>
+        </div>
+        <a href="./allTown.html" class="sideMenuList">
+          各縣市總覽
+        </a>
+        <div class="sideMenuPlus mt-auto">
+          <div class="title d-flex justify-content-between align-items-center mb-3">
+            <p class="plus fw-bold">添加</p>
+            <img src="./assets/images/signOut.svg" alt="signOut" class="w-auto">
+          </div>
+          <form class="citySelect d-flex justify-content-between flex-wrap">
+            <select name="選擇縣市">
+              <option value="1">台北市</option>
+              <option value="2">台北市</option>
+              <option value="3">台北市</option>
+            </select>
+            <select name="選擇鄉鎮">
+              <option value="1">大安區</option>
+              <option value="2">大安區</option>
+              <option value="3">大安區</option>
+            </select>
+            <button class="btn sure w-100">確定</button>
+          </form>
+          <ul class="memoryCity text-primary">
+            <li class="memoryCityList d-flex justify-content-between">台北市‧大安區<span class="fw-bold">25℃</span></li>
+            <li class="memoryCityList d-flex justify-content-between">台北市‧大安區<span class="fw-bold">25℃</span></li>
+            <li class="memoryCityList d-flex justify-content-between">台北市‧大安區<span class="fw-bold">25℃</span></li>
+          </ul>
+        </div>
+        <div class="sideSignIn mt-auto">
+          <a href="#" class="signIn mb-4 d-flex justify-content-between align-items-center">登入
+            <img src="./assets/images/signIn.svg" alt="signInPic" class="signInPic">
+          </a>
+
+          <dialog id="infoModal" class="text-center py-6 px-8">
+            <ul class="nav nav-pills mb-3 d-flex justify-content-around" id="pills-tab" role="tablist">
+              <li class="nav-item" role="presentation">
+                <button class="nav-link active signInTitle" id="pills-signIn-tab" data-bs-toggle="pill"
+                  data-bs-target="#pills-signIn" type="button" role="tab" aria-controls="pills-signIn"
+                  aria-selected="true">登入</button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button class="nav-link signUpTitle" id="pills-signUp-tab" data-bs-toggle="pill"
+                  data-bs-target="#pills-signUp" type="button" role="tab" aria-controls="pills-signUp"
+                  aria-selected="false">註冊</button>
+              </li>
+            </ul>
+            <div class="tab-content" id="pills-tabContent">
+              <div class="tab-pane fade show active" id="pills-signIn" role="tabpanel"
+                aria-labelledby="pills-signIn-tab">
+                <form action="" class="d-flex flex-column text-start">
+                  <label for="
+                  account" class="
+                  account mb-4">帳號：<input type="text" name="" id="
+                  account"></label>
+                  <label for="
+                  password" class="
+                  password">密碼：<input type="password" name="" id="
+                  password"></label>
+                  <button class="mt-5 signInSend py-1">登入</button>
+                </form>
+              </div>
+              <div class="tab-pane fade" id="pills-signUp" role="tabpanel" aria-labelledby="pills-signUp-tab">
+                <form action="" class="d-flex flex-column text-start">
+                  <label for="
+                account" class="
+                account mb-4">帳號：<input type="text" name="" id="
+                account"></label>
+                  <label for="
+                password" class="
+                password">密碼：<input type="password" name="" id="
+                password"></label>
+                  <button class="mt-5 signUpSend py-1">註冊</button>
+                </form>
+              </div>
+
+            </div>
+          </dialog>
+        </div>
+        <div class="copyright fw-bold">
+          Copyright © weather ° All Rights Reserved.
+        </div>
+      </div>
+    </div>
+    <div class="d-flex align-items-center">
+      <a href="#" class="locationIcon">
+        <img src="./assets/images/location.svg" alt="locationIcon" class="location d-none d-lg-block">
+        <img src="./assets/images/location-mobile.svg" alt="locationIcon" class="location d-block d-lg-none">
+      </a>
+    </div>
+  </header>
+
+
+
+  
+<div class="container allTown d-flex flex-column">
+    <ul class="nav nav-pills nav-fill mb-3 d-flex justify-content-between flex-nowrap" id="pills-tab" role="tablist">
+        <li class="nav-item mx-1 mb-2" role="presentation">
+            <button class="nav-link active text-nowrap" id="pills-north-tab" data-bs-toggle="pill"
+                data-bs-target="#pills-north" type="button" role="tab" aria-controls="pills-north"
+                aria-selected="true">北部</button>
+        </li>
+        <li class="nav-item mx-1" role="presentation">
+            <button class="nav-link text-nowrap" id="pills-middle-tab" data-bs-toggle="pill"
+                data-bs-target="#pills-middle" type="button" role="tab" aria-controls="pills-middle"
+                aria-selected="false">中部</button>
+        </li>
+        <li class="nav-item mx-1" role="presentation">
+            <button class="nav-link text-nowrap" id="pills-south-tab" data-bs-toggle="pill"
+                data-bs-target="#pills-south" type="button" role="tab" aria-controls="pills-south"
+                aria-selected="false">南部</button>
+        </li>
+        <li class="nav-item mx-1" role="presentation">
+            <button class="nav-link text-nowrap" id="pills-east-tab" data-bs-toggle="pill" data-bs-target="#pills-east"
+                type="button" role="tab" aria-controls="pills-east" aria-selected="false">東部</button>
+        </li>
+        <li class="nav-item mx-1" role="presentation">
+            <button class="nav-link text-nowrap" id="pills-outerIslands-tab" data-bs-toggle="pill"
+                data-bs-target="#pills-outerIslands" type="button" role="tab" aria-controls="pills-outerIslands"
+                aria-selected="false">外島</button>
+        </li>
+    </ul>
+    <div class="tab-content flex-grow-1" id="pills-tabContent">
+        <div class="tab-pane tab-paneOne fade show active" id="pills-north" role="tabpanel"
+            aria-labelledby="pills-north-tab">
+            <div class="d-flex flex-wrap justify-content-between">
+                <a href="./county.html" class="city d-flex flex-column flex-lg-row justify-content-between">
+                    <div class="info d-flex flex-column justify-content-around" href="#">
+                        <div class="infoCity">
+                            <p class="name fw-bold text-lg-start text-center mb-3 mb-lg-0">台北市</p>
+                            <p class="state d-none d-lg-block">晴</p>
+                        </div>
+                        <div class="infoState d-none d-lg-block">
+                            <p class="unbrella fw-bold"><img src="./assets/images/umbrellaIcon.svg" alt="unbrellaIcon"
+                                    class="unbrellaIcon">0 %</p>
+                            <p class="wind fw-bold"><img src="./assets/images/windIcon.svg" alt="windIcon"
+                                    class="windIcon">東南
+                                2km/h</p>
+                        </div>
+                    </div>
+                    <div
+                        class="infoIcon d-flex flex-column align-items-lg-end align-items-center justify-content-between">
+                        <img src="./assets/images/cityIcon04.svg" alt="cityWeatherIcon" class="cityWeatherIcon">
+                        <p class="cityDegrees fw-bold text-primary">30℃</p>
+                    </div>
+                </a>
+                <a href="#" class="city d-flex flex-column flex-lg-row justify-content-between">
+                    <div class="info d-flex flex-column justify-content-around" href="#">
+                        <div class="infoCity">
+                            <p class="name fw-bold text-lg-start text-center mb-3 mb-lg-0">台北市</p>
+                            <p class="state d-none d-lg-block">晴</p>
+                        </div>
+                        <div class="infoState d-none d-lg-block">
+                            <p class="unbrella fw-bold"><img src="./assets/images/umbrellaIcon.svg" alt="unbrellaIcon"
+                                    class="unbrellaIcon">0 %</p>
+                            <p class="wind fw-bold"><img src="./assets/images/windIcon.svg" alt="windIcon"
+                                    class="windIcon">東南
+                                2km/h</p>
+                        </div>
+                    </div>
+                    <div
+                        class="infoIcon d-flex flex-column align-items-lg-end align-items-center justify-content-between">
+                        <img src="./assets/images/cityIcon02.svg" alt="cityWeatherIcon" class="cityWeatherIcon">
+                        <p class="cityDegrees fw-bold text-primary">30℃</p>
+                    </div>
+                </a>
+                <a href="#" class="city d-flex flex-column flex-lg-row justify-content-between">
+                    <div class="info d-flex flex-column justify-content-around" href="#">
+                        <div class="infoCity">
+                            <p class="name fw-bold text-lg-start text-center mb-3 mb-lg-0">台北市</p>
+                            <p class="state d-none d-lg-block">晴</p>
+                        </div>
+                        <div class="infoState d-none d-lg-block">
+                            <p class="unbrella fw-bold"><img src="./assets/images/umbrellaIcon.svg" alt="unbrellaIcon"
+                                    class="unbrellaIcon">0 %</p>
+                            <p class="wind fw-bold"><img src="./assets/images/windIcon.svg" alt="windIcon"
+                                    class="windIcon">東南
+                                2km/h</p>
+                        </div>
+                    </div>
+                    <div
+                        class="infoIcon d-flex flex-column align-items-lg-end align-items-center justify-content-between">
+                        <img src="./assets/images/cityIcon03.svg" alt="cityWeatherIcon" class="cityWeatherIcon">
+                        <p class="cityDegrees fw-bold text-primary">30℃</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div class="tab-pane fade tab-paneTwo" id="pills-middle" role="tabpanel" aria-labelledby="pills-middle-tab">
+            <div class="d-flex flex-wrap justify-content-between">
+                <a href="./county.html" class="city d-flex flex-column flex-lg-row justify-content-between">
+                    <div class="info d-flex flex-column justify-content-around" href="#">
+                        <div class="infoCity">
+                            <p class="name fw-bold text-lg-start text-center mb-3 mb-lg-0">台北市</p>
+                            <p class="state d-none d-lg-block">晴</p>
+                        </div>
+                        <div class="infoState d-none d-lg-block">
+                            <p class="unbrella fw-bold"><img src="./assets/images/umbrellaIcon.svg" alt="unbrellaIcon"
+                                    class="unbrellaIcon">0 %</p>
+                            <p class="wind fw-bold"><img src="./assets/images/windIcon.svg" alt="windIcon"
+                                    class="windIcon">東南
+                                2km/h</p>
+                        </div>
+                    </div>
+                    <div
+                        class="infoIcon d-flex flex-column align-items-lg-end align-items-center justify-content-between">
+                        <img src="./assets/images/cityIcon04.svg" alt="cityWeatherIcon" class="cityWeatherIcon">
+                        <p class="cityDegrees text-primary fw-bold">30℃</p>
+                    </div>
+                </a>
+                <a href="#" class="city d-flex flex-column flex-lg-row justify-content-between">
+                    <div class="info d-flex flex-column justify-content-around" href="#">
+                        <div class="infoCity">
+                            <p class="name fw-bold text-lg-start text-center mb-3 mb-lg-0">台北市</p>
+                            <p class="state d-none d-lg-block">晴</p>
+                        </div>
+                        <div class="infoState d-none d-lg-block">
+                            <p class="unbrella fw-bold"><img src="./assets/images/umbrellaIcon.svg" alt="unbrellaIcon"
+                                    class="unbrellaIcon">0 %</p>
+                            <p class="wind fw-bold"><img src="./assets/images/windIcon.svg" alt="windIcon"
+                                    class="windIcon">東南
+                                2km/h</p>
+                        </div>
+                    </div>
+                    <div
+                        class="infoIcon d-flex flex-column align-items-lg-end align-items-center justify-content-between">
+                        <img src="./assets/images/cityIcon02.svg" alt="cityWeatherIcon" class="cityWeatherIcon">
+                        <p class="cityDegrees fw-bold text-primary">30℃</p>
+                    </div>
+                </a>
+                <a href="#" class="city d-flex flex-column flex-lg-row justify-content-between">
+                    <div class="info d-flex flex-column justify-content-around" href="#">
+                        <div class="infoCity">
+                            <p class="name fw-bold text-lg-start text-center mb-3 mb-lg-0">台北市</p>
+                            <p class="state d-none d-lg-block">晴</p>
+                        </div>
+                        <div class="infoState d-none d-lg-block">
+                            <p class="unbrella fw-bold"><img src="./assets/images/umbrellaIcon.svg" alt="unbrellaIcon"
+                                    class="unbrellaIcon">0 %</p>
+                            <p class="wind fw-bold"><img src="./assets/images/windIcon.svg" alt="windIcon"
+                                    class="windIcon">東南
+                                2km/h</p>
+                        </div>
+                    </div>
+                    <div
+                        class="infoIcon d-flex flex-column align-items-lg-end align-items-center justify-content-between">
+                        <img src="./assets/images/cityIcon03.svg" alt="cityWeatherIcon" class="cityWeatherIcon">
+                        <p class="cityDegrees fw-bold text-primary">30℃</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div class="tab-pane fade tab-paneThree" id="pills-south" role="tabpanel" aria-labelledby="pills-south-tab">
+            <div class="d-flex flex-wrap justify-content-between">
+                <a href="./county.html" class="city d-flex flex-column flex-lg-row justify-content-between">
+                    <div class="info d-flex flex-column justify-content-around" href="#">
+                        <div class="infoCity">
+                            <p class="name fw-bold text-lg-start text-center mb-3 mb-lg-0">台北市</p>
+                            <p class="state d-none d-lg-block">晴</p>
+                        </div>
+                        <div class="infoState d-none d-lg-block">
+                            <p class="unbrella fw-bold"><img src="./assets/images/umbrellaIcon.svg" alt="unbrellaIcon"
+                                    class="unbrellaIcon">0 %</p>
+                            <p class="wind fw-bold"><img src="./assets/images/windIcon.svg" alt="windIcon"
+                                    class="windIcon">東南
+                                2km/h</p>
+                        </div>
+                    </div>
+                    <div
+                        class="infoIcon d-flex flex-column align-items-lg-end align-items-center justify-content-between">
+                        <img src="./assets/images/cityIcon04.svg" alt="cityWeatherIcon" class="cityWeatherIcon">
+                        <p class="cityDegrees fw-bold text-primary">30℃</p>
+                    </div>
+                </a>
+                <a href="#" class="city d-flex flex-column flex-lg-row justify-content-between">
+                    <div class="info d-flex flex-column justify-content-around" href="#">
+                        <div class="infoCity">
+                            <p class="name fw-bold text-lg-start text-center mb-3 mb-lg-0">台北市</p>
+                            <p class="state d-none d-lg-block">晴</p>
+                        </div>
+                        <div class="infoState d-none d-lg-block">
+                            <p class="unbrella fw-bold"><img src="./assets/images/umbrellaIcon.svg" alt="unbrellaIcon"
+                                    class="unbrellaIcon">0 %</p>
+                            <p class="wind fw-bold"><img src="./assets/images/windIcon.svg" alt="windIcon"
+                                    class="windIcon">東南
+                                2km/h</p>
+                        </div>
+                    </div>
+                    <div
+                        class="infoIcon d-flex flex-column align-items-lg-end align-items-center justify-content-between">
+                        <img src="./assets/images/cityIcon02.svg" alt="cityWeatherIcon" class="cityWeatherIcon">
+                        <p class="cityDegrees fw-bold text-primary">30℃</p>
+                    </div>
+                </a>
+                <a href="#" class="city d-flex flex-column flex-lg-row justify-content-between">
+                    <div class="info d-flex flex-column justify-content-around" href="#">
+                        <div class="infoCity">
+                            <p class="name fw-bold text-lg-start text-center mb-3 mb-lg-0">台北市</p>
+                            <p class="state d-none d-lg-block">晴</p>
+                        </div>
+                        <div class="infoState d-none d-lg-block">
+                            <p class="unbrella fw-bold"><img src="./assets/images/umbrellaIcon.svg" alt="unbrellaIcon"
+                                    class="unbrellaIcon">0 %</p>
+                            <p class="wind fw-bold"><img src="./assets/images/windIcon.svg" alt="windIcon"
+                                    class="windIcon">東南
+                                2km/h</p>
+                        </div>
+                    </div>
+                    <div
+                        class="infoIcon d-flex flex-column align-items-lg-end align-items-center justify-content-between">
+                        <img src="./assets/images/cityIcon03.svg" alt="cityWeatherIcon" class="cityWeatherIcon">
+                        <p class="cityDegrees fw-bold text-primary">30℃</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div class="tab-pane fade tab-paneFour" id="pills-east" role="tabpanel" aria-labelledby="pills-east-tab">
+            <div class="d-flex flex-wrap justify-content-between">
+                <a href="./county.html" class="city d-flex flex-column flex-lg-row justify-content-between">
+                    <div class="info d-flex flex-column justify-content-around" href="#">
+                        <div class="infoCity">
+                            <p class="name fw-bold text-lg-start text-center mb-3 mb-lg-0">台北市</p>
+                            <p class="state d-none d-lg-block">晴</p>
+                        </div>
+                        <div class="infoState d-none d-lg-block">
+                            <p class="unbrella fw-bold"><img src="./assets/images/umbrellaIcon.svg" alt="unbrellaIcon"
+                                    class="unbrellaIcon">0 %</p>
+                            <p class="wind fw-bold"><img src="./assets/images/windIcon.svg" alt="windIcon"
+                                    class="windIcon">東南
+                                2km/h</p>
+                        </div>
+                    </div>
+                    <div
+                        class="infoIcon d-flex flex-column align-items-lg-end align-items-center justify-content-between">
+                        <img src="./assets/images/cityIcon04.svg" alt="cityWeatherIcon" class="cityWeatherIcon">
+                        <p class="cityDegrees fw-bold text-primary">30℃</p>
+                    </div>
+                </a>
+                <a href="#" class="city d-flex flex-column flex-lg-row justify-content-between">
+                    <div class="info d-flex flex-column justify-content-around" href="#">
+                        <div class="infoCity">
+                            <p class="name fw-bold text-lg-start text-center mb-3 mb-lg-0">台北市</p>
+                            <p class="state d-none d-lg-block">晴</p>
+                        </div>
+                        <div class="infoState d-none d-lg-block">
+                            <p class="unbrella fw-bold"><img src="./assets/images/umbrellaIcon.svg" alt="unbrellaIcon"
+                                    class="unbrellaIcon">0 %</p>
+                            <p class="wind fw-bold"><img src="./assets/images/windIcon.svg" alt="windIcon"
+                                    class="windIcon">東南
+                                2km/h</p>
+                        </div>
+                    </div>
+                    <div
+                        class="infoIcon d-flex flex-column align-items-lg-end align-items-center justify-content-between">
+                        <img src="./assets/images/cityIcon02.svg" alt="cityWeatherIcon" class="cityWeatherIcon">
+                        <p class="cityDegrees fw-bold text-primary">30℃</p>
+                    </div>
+                </a>
+                <a href="#" class="city d-flex flex-column flex-lg-row justify-content-between">
+                    <div class="info d-flex flex-column justify-content-around" href="#">
+                        <div class="infoCity">
+                            <p class="name fw-bold text-lg-start text-center mb-3 mb-lg-0">台北市</p>
+                            <p class="state d-none d-lg-block">晴</p>
+                        </div>
+                        <div class="infoState d-none d-lg-block">
+                            <p class="unbrella fw-bold"><img src="./assets/images/umbrellaIcon.svg" alt="unbrellaIcon"
+                                    class="unbrellaIcon">0 %</p>
+                            <p class="wind fw-bold"><img src="./assets/images/windIcon.svg" alt="windIcon"
+                                    class="windIcon">東南
+                                2km/h</p>
+                        </div>
+                    </div>
+                    <div
+                        class="infoIcon d-flex flex-column align-items-lg-end align-items-center justify-content-between">
+                        <img src="./assets/images/cityIcon03.svg" alt="cityWeatherIcon" class="cityWeatherIcon">
+                        <p class="cityDegrees fw-bold text-primary">30℃</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div class="tab-pane fade tab-paneFive" id="pills-outerIslands" role="tabpanel"
+            aria-labelledby="pills-outerIslands-tab">
+            <div class="d-flex flex-wrap justify-content-between">
+                <a href="./county.html" class="city d-flex flex-column flex-lg-row justify-content-between">
+                    <div class="info d-flex flex-column justify-content-around" href="#">
+                        <div class="infoCity">
+                            <p class="name fw-bold text-lg-start text-center mb-3 mb-lg-0">台北市</p>
+                            <p class="state d-none d-lg-block">晴</p>
+                        </div>
+                        <div class="infoState d-none d-lg-block">
+                            <p class="unbrella fw-bold"><img src="./assets/images/umbrellaIcon.svg" alt="unbrellaIcon"
+                                    class="unbrellaIcon">0 %</p>
+                            <p class="wind fw-bold"><img src="./assets/images/windIcon.svg" alt="windIcon"
+                                    class="windIcon">東南
+                                2km/h</p>
+                        </div>
+                    </div>
+                    <div
+                        class="infoIcon d-flex flex-column align-items-lg-end align-items-center justify-content-between">
+                        <img src="./assets/images/cityIcon04.svg" alt="cityWeatherIcon" class="cityWeatherIcon">
+                        <p class="cityDegrees fw-bold text-primary">30℃</p>
+                    </div>
+                </a>
+                <a href="#" class="city d-flex flex-column flex-lg-row justify-content-between">
+                    <div class="info d-flex flex-column justify-content-around" href="#">
+                        <div class="infoCity">
+                            <p class="name fw-bold text-lg-start text-center mb-3 mb-lg-0">台北市</p>
+                            <p class="state d-none d-lg-block">晴</p>
+                        </div>
+                        <div class="infoState d-none d-lg-block">
+                            <p class="unbrella fw-bold"><img src="./assets/images/umbrellaIcon.svg" alt="unbrellaIcon"
+                                    class="unbrellaIcon">0 %</p>
+                            <p class="wind fw-bold"><img src="./assets/images/windIcon.svg" alt="windIcon"
+                                    class="windIcon">東南
+                                2km/h</p>
+                        </div>
+                    </div>
+                    <div
+                        class="infoIcon d-flex flex-column align-items-lg-end align-items-center justify-content-between">
+                        <img src="./assets/images/cityIcon02.svg" alt="cityWeatherIcon" class="cityWeatherIcon">
+                        <p class="cityDegrees fw-bold text-primary">30℃</p>
+                    </div>
+                </a>
+                <a href="#" class="city d-flex flex-column flex-lg-row justify-content-between">
+                    <div class="info d-flex flex-column justify-content-around" href="#">
+                        <div class="infoCity">
+                            <p class="name fw-bold text-lg-start text-center mb-3 mb-lg-0">台北市</p>
+                            <p class="state d-none d-lg-block">晴</p>
+                        </div>
+                        <div class="infoState d-none d-lg-block">
+                            <p class="unbrella fw-bold"><img src="./assets/images/umbrellaIcon.svg" alt="unbrellaIcon"
+                                    class="unbrellaIcon">0 %</p>
+                            <p class="wind fw-bold"><img src="./assets/images/windIcon.svg" alt="windIcon"
+                                    class="windIcon">東南
+                                2km/h</p>
+                        </div>
+                    </div>
+                    <div
+                        class="infoIcon d-flex flex-column align-items-lg-end align-items-center justify-content-between">
+                        <img src="./assets/images/cityIcon03.svg" alt="cityWeatherIcon" class="cityWeatherIcon">
+                        <p class="cityDegrees fw-bold text-primary">30℃</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <script src="./assets/js/vendors.js"></script>
+    <script src="./assets/js/all.js"></script>
+</body>
+
+</html>

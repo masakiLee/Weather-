@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>
+    Weather°
+  </title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" />
+  <link rel="stylesheet" href="./assets/style/all.css">
+</head>
+
+<body>
+
+  <header class="header container-fluid d-flex justify-content-between align-items-center px-4 py-3 bg-white">
+    <a href="#" class="menuIcon">
+      <img src="./assets/images/menu.svg" alt="menuIcon" class="menu d-none d-lg-block">
+      <img src="./assets/images/menu-mobile.svg" alt="menuIcon" class="menu d-block d-lg-none">
+    </a>
+    <h1 class="WeatherIcon">
+      <a href="./index.html" class="logoTag">
+        <img src="./assets/images/Weather °.svg" alt="Weather°" class="Weather d-none d-lg-block">
+        <img src="./assets/images/Weather°-mobile.svg" alt="Weather°" class="Weather d-block d-lg-none">
+      </a>
+    </h1>
+    <div class="sideMask">
+      <div class="sideMenu d-flex flex-column">
+        <div class="title d-flex justify-content-between align-items-center">
+          <a href="./index.html"><img src="./assets/images/Weather °.svg" alt="Weather°" class="sideMenuLogo"></a>
+          <i class="fas fa-times sideMenuIcon"></i>
+        </div>
+        <a href="./allTown.html" class="sideMenuList">
+          各縣市總覽
+        </a>
+        <div class="sideMenuPlus mt-auto">
+          <div class="title d-flex justify-content-between align-items-center mb-3">
+            <p class="plus fw-bold">添加</p>
+            <img src="./assets/images/signOut.svg" alt="signOut" class="w-auto">
+          </div>
+          <form class="citySelect d-flex justify-content-between flex-wrap">
+            <select name="選擇縣市">
+              <option value="1">台北市</option>
+              <option value="2">台北市</option>
+              <option value="3">台北市</option>
+            </select>
+            <select name="選擇鄉鎮">
+              <option value="1">大安區</option>
+              <option value="2">大安區</option>
+              <option value="3">大安區</option>
+            </select>
+            <button class="btn sure w-100">確定</button>
+          </form>
+          <ul class="memoryCity text-primary">
+            <li class="memoryCityList d-flex justify-content-between">台北市‧大安區<span class="fw-bold">25℃</span></li>
+            <li class="memoryCityList d-flex justify-content-between">台北市‧大安區<span class="fw-bold">25℃</span></li>
+            <li class="memoryCityList d-flex justify-content-between">台北市‧大安區<span class="fw-bold">25℃</span></li>
+          </ul>
+        </div>
+        <div class="sideSignIn mt-auto">
+          <a href="#" class="signIn mb-4 d-flex justify-content-between align-items-center">登入
+            <img src="./assets/images/signIn.svg" alt="signInPic" class="signInPic">
+          </a>
+
+          <dialog id="infoModal" class="text-center py-6 px-8">
+            <ul class="nav nav-pills mb-3 d-flex justify-content-around" id="pills-tab" role="tablist">
+              <li class="nav-item" role="presentation">
+                <button class="nav-link active signInTitle" id="pills-signIn-tab" data-bs-toggle="pill"
+                  data-bs-target="#pills-signIn" type="button" role="tab" aria-controls="pills-signIn"
+                  aria-selected="true">登入</button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button class="nav-link signUpTitle" id="pills-signUp-tab" data-bs-toggle="pill"
+                  data-bs-target="#pills-signUp" type="button" role="tab" aria-controls="pills-signUp"
+                  aria-selected="false">註冊</button>
+              </li>
+            </ul>
+            <div class="tab-content" id="pills-tabContent">
+              <div class="tab-pane fade show active" id="pills-signIn" role="tabpanel"
+                aria-labelledby="pills-signIn-tab">
+                <form action="" class="d-flex flex-column text-start">
+                  <label for="
+                  account" class="
+                  account mb-4">帳號：<input type="text" name="" id="
+                  account"></label>
+                  <label for="
+                  password" class="
+                  password">密碼：<input type="password" name="" id="
+                  password"></label>
+                  <button class="mt-5 signInSend py-1">登入</button>
+                </form>
+              </div>
+              <div class="tab-pane fade" id="pills-signUp" role="tabpanel" aria-labelledby="pills-signUp-tab">
+                <form action="" class="d-flex flex-column text-start">
+                  <label for="
+                account" class="
+                account mb-4">帳號：<input type="text" name="" id="
+                account"></label>
+                  <label for="
+                password" class="
+                password">密碼：<input type="password" name="" id="
+                password"></label>
+                  <button class="mt-5 signUpSend py-1">註冊</button>
+                </form>
+              </div>
+
+            </div>
+          </dialog>
+        </div>
+        <div class="copyright fw-bold">
+          Copyright © weather ° All Rights Reserved.
+        </div>
+      </div>
+    </div>
+    <div class="d-flex align-items-center">
+      <a href="#" class="locationIcon">
+        <img src="./assets/images/location.svg" alt="locationIcon" class="location d-none d-lg-block">
+        <img src="./assets/images/location-mobile.svg" alt="locationIcon" class="location d-block d-lg-none">
+      </a>
+    </div>
+  </header>
+
+
+
+  
+<section class="banner">
+    <div class="container weatherIntro d-flex flex-column justify-content-between">
+        <div class="weatherDay d-md-flex justify-content-between">
+            <div class="weatherDayIcon col-md-6 mx-auto m-md-0">
+                <img src="./assets/images/weatherDayIcon04.svg" alt="weatherDayIcon" class="weatherDayIconImg">
+            </div>
+            <div
+                class="weatherDayInfo col-md-6 d-md-flex justify-content-center justify-content-md-end align-items-center mt-2 mt-md-0 change">
+                <!-- //當下英文 -->
+                <div class="present text-center pe-0 pe-md-5">
+                    <div class="temperature fw-bold">
+                        34<span class="degree fw-bold"> ℃</span>
+                    </div>
+                    <!-- 當時英文 -->
+                    <div class="immediately fw-bold text-nowrap">
+                        09：29 <span class="collectively"> AM</span>
+                    </div>
+                </div>
+                <!-- 當日英文 -->
+                <div
+                    class="intraday ps-0 ps-md-5 d-flex flex-md-column justify-content-center justify-content-md-start align-items-center align-items-md-start mt-1 mt-md-0">
+                    <p class="day">2022.09.29</p>
+                    <p class="place py-0 py-md-3 text-nowrap">新北市‧板橋區</p>
+                    <p class="climate">晴</p>
+                </div>
+            </div>
+        </div>
+        <div class="weatherDate pb-3 pb-md-8 pb-lg-4">
+            <ul class="nav nav-tabs mb-4" id="myTab" role="tablist">
+                <li class="nav-item me-4 me-md-10" role="presentation">
+                    <button class="nav-link active fw-bold" id="today-tab" data-bs-toggle="tab" data-bs-target="#today"
+                        type="button" role="tab" aria-controls="today" aria-selected="true">Today</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link fw-bold" id="week-tab" data-bs-toggle="tab" data-bs-target="#week"
+                        type="button" role="tab" aria-controls="week" aria-selected="false">Week</button>
+                </li>
+            </ul>
+            <div class="tab-content" id="myTabContent">
+                <div class="tab-pane fade show active" id="today" role="tabpanel" aria-labelledby="today-tab">
+                    <ul class="dateListBox d-flex justify-content-between text-center">
+                        <li class="dateList me-4">
+                            <a href="#" class="d-flex flex-column h-100">
+                                <p class=" times fw-bold text-nowrap">04：00</p>
+                                <img src="./assets/images/dateListIcon01.svg" alt="dateListIcon"
+                                    class="mx-auto dateListIcon">
+                                <p class="temperatureSmall fw-bold mt-auto">26℃</p>
+                            </a>
+                        </li>
+                        <li class="dateList me-4">
+                            <a href="#" class="d-flex flex-column h-100">
+                                <p class=" times fw-bold text-nowrap">08：00</p>
+                                <img src="./assets/images/dateListIcon02.svg" alt="dateListIcon"
+                                    class="mx-auto dateListIcon">
+                                <p class="temperatureSmall fw-bold mt-auto">26℃</p>
+                            </a>
+                        </li>
+                        <li class="dateList me-4">
+                            <a href="#" class="d-flex flex-column h-100">
+                                <p class=" times fw-bold text-nowrap">12：00</p>
+                                <img src="./assets/images/dateListIcon03.svg" alt="dateListIcon"
+                                    class="mx-auto dateListIcon">
+                                <p class="temperatureSmall fw-bold mt-auto">28℃</p>
+                            </a>
+                        </li>
+                        <li class="dateList me-4">
+                            <a href="#" class="d-flex flex-column h-100">
+                                <p class=" times fw-bold text-nowrap">16：00</p>
+                                <img src="./assets/images/dateListIcon04.svg" alt="dateListIcon"
+                                    class="mx-auto dateListIcon">
+                                <p class="temperatureSmall fw-bold mt-auto">26℃</p>
+                            </a>
+                        </li>
+                        <li class="dateList me-4">
+                            <a href="#" class="d-flex flex-column h-100">
+                                <p class=" times fw-bold text-nowrap">20：00</p>
+                                <img src="./assets/images/dateListIcon05.svg" alt="dateListIcon"
+                                    class="mx-auto dateListIcon">
+                                <p class="temperatureSmall fw-bold mt-auto">25℃</p>
+                            </a>
+                        </li>
+                        <li class="dateList">
+                            <a href="#" class="d-flex flex-column h-100">
+                                <p class=" times fw-bold text-nowrap">24：00</p>
+                                <img src="./assets/images/dateListIcon05.svg" alt="dateListIcon"
+                                    class="mx-auto dateListIcon">
+                                <p class="temperatureSmall fw-bold mt-auto">25℃</p>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="tab-pane fade" id="week" role="tabpanel" aria-labelledby="week-tab">
+                    <ul class="dateListBox d-flex justify-content-between text-center">
+                        <li class="dateList me-4">
+                            <a href="#" class="d-flex flex-column h-100">
+                                <p class="times fw-bold text-nowrap">星期二</p>
+                                <img src="./assets/images/dateListIcon02.svg" alt="dateListIcon"
+                                    class="mx-auto dateListIcon">
+                                <p class="temperatureSmall fw-bold mt-auto">25℃</p>
+                            </a>
+                        </li>
+                        <li class="dateList me-4">
+                            <a href="#" class="d-flex flex-column h-100">
+                                <p class=" times fw-bold text-nowrap">星期三</p>
+                                <img src="./assets/images/dateListIcon01.svg" alt="dateListIcon"
+                                    class="mx-auto dateListIcon">
+                                <p class="temperatureSmall fw-bold mt-auto">26℃</p>
+                            </a>
+                        </li>
+                        <li class="dateList me-4">
+                            <a href="#" class="d-flex flex-column h-100">
+                                <p class=" times fw-bold text-nowrap">星期四</p>
+                                <img src="./assets/images/dateListIcon02.svg" alt="dateListIcon"
+                                    class="mx-auto dateListIcon">
+                                <p class="temperatureSmall fw-bold mt-auto">24℃</p>
+                            </a>
+                        </li>
+                        <li class="dateList me-4">
+                            <a href="#" class="d-flex flex-column h-100">
+                                <p class=" times fw-bold text-nowrap">星期五</p>
+                                <img src="./assets/images/dateListIcon04.svg" alt="dateListIcon"
+                                    class="mx-auto dateListIcon">
+                                <p class="temperatureSmall fw-bold mt-auto">22℃</p>
+                            </a>
+                        </li>
+                        <li class="dateList me-4">
+                            <a href="#" class="d-flex flex-column h-100">
+                                <p class=" times fw-bold text-nowrap">星期六</p>
+                                <img src="./assets/images/dateListIcon02.svg" alt="dateListIcon"
+                                    class="mx-auto dateListIcon">
+                                <p class="temperatureSmall fw-bold mt-auto">23℃</p>
+                            </a>
+                        </li>
+                        <li class="dateList">
+                            <a href="#" class="d-flex flex-column h-100">
+                                <p class=" times fw-bold text-nowrap">星期日</p>
+                                <img src="./assets/images/dateListIcon03.svg" alt="dateListIcon"
+                                    class="mx-auto dateListIcon">
+                                <p class="temperatureSmall fw-bold mt-auto">24℃</p>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+</section>
+
+    <script src="./assets/js/vendors.js"></script>
+    <script src="./assets/js/all.js"></script>
+</body>
+
+</html>
