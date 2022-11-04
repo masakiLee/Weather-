@@ -1,0 +1,167 @@
+---
+title: Weather° - county
+layout: ./app/layout.ejs
+engine: ejs
+current: index
+---
+
+<div class="container county">
+    <div class="countyTitle d-flex justify-content-between mb-5">
+        <h2 class="d-flex align-items-center"><img src="./assets/images/countyIcon.svg" alt="countyIcon"
+                class="countyIcon me-3">縣市預報
+            -<span class="ms-1">台北市</span>
+        </h2>
+        <a href="./allTown.html"><img src="./assets/images/return.svg" alt="return" class="return"></a>
+    </div>
+    <ul class="nav nav-pills d-flex flex-nowrap justify-content-between" id="pills-tab" role="tablist">
+        <li class="nav-item" role="presentation">
+            <a class="nav-link active text-center" id="pills-one-tab" data-bs-toggle="pill" data-bs-target="#pills-one"
+                type="button" role="tab" aria-controls="pills-one" aria-selected="true">
+                <p class="title fw-bold text-nowrap">星期二</p>
+                <p class="date fw-bold">9/29</p>
+                <img src="./assets/images/countyWeatherIcon02.svg" alt="countyWeatherIcon"
+                    class="countyWeatherIcon d-none d-xl-block mx-auto">
+                <p class="todayDegree fw-bold d-none d-xl-block">34℃</p>
+            </a>
+        </li>
+        <li class="nav-item" role="presentation">
+            <a class="nav-link text-center" id="pills-two-tab" data-bs-toggle="pill" data-bs-target="#pills-two"
+                type="button" role="tab" aria-controls="pills-two" aria-selected="false">
+                <p class="title fw-bold text-nowrap">星期三</p>
+                <p class="date fw-bold">9/29</p>
+                <img src="./assets/images/countyWeatherIcon02.svg" alt="countyWeatherIcon"
+                    class="countyWeatherIcon  d-none d-xl-block mx-auto">
+                <p class="todayDegree fw-bold d-none d-xl-block">34℃</p>
+            </a>
+        </li>
+        <li class="nav-item" role="presentation">
+            <a class="nav-link text-center" id="pills-three-tab" data-bs-toggle="pill" data-bs-target="#pills-three"
+                type="button" role="tab" aria-controls="pills-three" aria-selected="false">
+                <p class="title fw-bold text-nowrap">星期四</p>
+                <p class="date fw-bold">9/29</p>
+                <img src="./assets/images/countyWeatherIcon03.svg" alt="countyWeatherIcon"
+                    class="countyWeatherIcon d-none d-xl-block mx-auto">
+                <p class="todayDegree fw-bold d-none d-xl-block">34℃</p>
+            </a>
+        </li>
+        <li class="nav-item" role="presentation">
+            <a class="nav-link text-center" id="pills-four-tab" data-bs-toggle="pill" data-bs-target="#pills-four"
+                type="button" role="tab" aria-controls="pills-four" aria-selected="true">
+                <p class="title fw-bold text-nowrap">星期五</p>
+                <p class="date fw-bold">9/29</p>
+                <img src="./assets/images/countyWeatherIcon02.svg" alt="countyWeatherIcon"
+                    class="countyWeatherIcon d-none d-xl-block mx-auto">
+                <p class="todayDegree fw-bold d-none d-xl-block">34℃</p>
+            </a>
+        </li>
+        <li class="nav-item" role="presentation">
+            <a class="nav-link text-center" id="pills-five-tab" data-bs-toggle="pill" data-bs-target="#pills-five"
+                type="button" role="tab" aria-controls="pills-five" aria-selected="false">
+                <p class="title fw-bold text-nowrap">星期六</p>
+                <p class="date fw-bold">9/29</p>
+                <img src="./assets/images/countyWeatherIcon04.svg" alt="countyWeatherIcon"
+                    class="countyWeatherIcon d-none d-xl-block mx-auto">
+                <p class="todayDegree fw-bold d-none d-xl-block">34℃</p>
+            </a>
+        </li>
+        <li class="nav-item" role="presentation">
+            <a class="nav-link text-center" id="pills-six-tab" data-bs-toggle="pill" data-bs-target="#pills-six"
+                type="button" role="tab" aria-controls="pills-six" aria-selected="false">
+                <p class="title fw-bold text-nowrap">星期日</p>
+                <p class="date fw-bold">9/29</p>
+                <img src="./assets/images/countyWeatherIcon03.svg" alt="countyWeatherIcon"
+                    class="countyWeatherIcon d-none d-xl-block mx-auto">
+                <p class="todayDegree fw-bold d-none d-xl-block">34℃</p>
+            </a>
+        </li>
+    </ul>
+    <div class="tab-content" id="pills-tabContent">
+        <div class="tab-pane fade show active" id="pills-one" role="tabpanel" aria-labelledby="pills-one-tab">
+            <ul class="d-flex justify-content-between flex-wrap">
+                <li class="weatherContent weatherDouble fw-bold d-flex flex-column">
+                    <p class="title text-center text-md-start">氣溫</p>
+                    <div class="info d-flex justify-content-between align-items-center align-items-md-end mt-auto">
+                        <img src="./assets/images/countyTemperatureImg.svg" alt="countyTemperatureImg" class="w-auto">
+                        <p class="text text-danger">34℃</p>
+                        <p class="text text-secondary">32℃</p>
+                    </div>
+                </li>
+                <li class="weatherContent weatherCenter fw-bold d-flex flex-column">
+                    <p class="title">體感溫度</p>
+                    <div class="info d-flex justify-content-center align-items-end mt-auto">
+                        <img src="./assets/images/CountyApparentTemperature.svg" alt="CountyApparentTemperature"
+                            class="w-auto me-1 me-md-0">
+                        <p class="text text-primary">34 <span>℃</span></p>
+                    </div>
+                </li>
+                <li class="weatherContent weatherCenter fw-bold d-flex flex-column">
+                    <p class="title">紫外線</p>
+                    <div class="info d-flex justify-content-center align-items-center align-items-md-end mt-auto">
+                        <img src="./assets/images/CountyUV.svg" alt="CountyUV" class="w-auto">
+                        <p class="fz88">8</p>
+                    </div>
+                </li>
+                <li class="weatherContent weatherDouble fw-bold d-flex flex-column">
+                    <p class="title text-center text-md-start">降雨機率＆雨量 <span> (mm)</span></p>
+                    <div class="info d-flex justify-content-around align-items-end mt-auto h-100">
+                        <div class="d-flex align-items-center align-items-md-end h-100">
+                            <p class="text text-primary">30</p>
+                            <img src="./assets/images/countyRainProbability.svg" alt="countyRainProbability"
+                                class="w-auto">
+                        </div>
+                        <div class="d-flex align-items-center align-items-md-end h-100">
+                            <p class="text text-primary">1.2</p>
+                            <img src="./assets/images/countyRainfull.svg" alt="countyRainfull" class="w-auto ms-2">
+                        </div>
+                    </div>
+                </li>
+                <li class="weatherContent weatherDouble fw-bold d-flex flex-column">
+                    <p class="title text-center text-md-start">日出＆日落</p>
+                    <div class="info d-flex flex-column flex-md-row justify-content-between align-items-center my-auto">
+                        <div class="d-flex align-items-center mb-2 mb-md-0">
+                            <img src="./assets/images/countySunrise.svg" alt="countySunrise" class="w-auto">
+                            <p class="textSize text-nowrap ms-3">05：22</p>
+                        </div>
+                        <div class="d-flex align-items-center">
+                            <img src="./assets/images/countySunset.svg" alt="countySunset" class="w-auto">
+                            <p class="textSize text-nowrap ms-3">17：40</p>
+                        </div>
+                    </div>
+                </li>
+                <li class="weatherContent weatherCenter fw-bold">
+                    <p class="title">舒適度</p>
+                    <div class="info d-flex justify-content-center align-items-center">
+                        <img src="./assets/images/countyComfort.svg" alt="countyComfort" class="countyComfort">
+                    </div>
+                </li>
+                <li class="weatherContent weatherCenter fw-bold d-flex flex-column">
+                    <p class="title">相對溼度</p>
+                    <div class="info d-flex justify-content-center align-items-center mt-auto">
+                        <div class="d-flex justify-content-center align-items-end">
+                            <p class="fz88 me-1">60</p>
+                            <img src="./assets/images/countyMoisture.svg" alt="countyMoisture" class="w-auto">
+                        </div>
+                    </div>
+                </li>
+                <li class="weatherContent weatherDouble fw-bold d-flex flex-column">
+                    <p class="title text-center text-md-start">風向＆風級</p>
+                    <div class="info d-flex justify-content-around align-items-center my-auto">
+                        <div class="d-flex align-items-center">
+                            <p class="textmiddle me-2">偏東南</p>
+                            <img src="./assets/images/countyWind.svg" alt="countyWind" class="w-auto">
+                        </div>
+                        <div class="d-flex align-items-center">
+                            <p class="textmiddle text-secondary ">Lv.</p>
+                            <p class="text ms-2">2</p>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="tab-pane fade" id="pills-two" role="tabpanel" aria-labelledby="pills-two-tab">2</div>
+        <div class="tab-pane fade" id="pills-three" role="tabpanel" aria-labelledby="pills-three-tab">3</div>
+        <div class="tab-pane fade" id="pills-four" role="tabpanel" aria-labelledby="pills-four-tab">4</div>
+        <div class="tab-pane fade" id="pills-five" role="tabpanel" aria-labelledby="pills-five-tab">5</div>
+        <div class="tab-pane fade" id="pills-six" role="tabpanel" aria-labelledby="pills-six-tab">6</div>
+    </div>
+</div>

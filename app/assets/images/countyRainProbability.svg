@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="54.528" height="57.528" viewBox="0 0 54.528 57.528">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #4092fb;
+      }
+
+      .cls-2 {
+        fill: none;
+        stroke: #4092fb;
+        stroke-linecap: round;
+        stroke-width: 5px;
+      }
+
+      .cls-3 {
+        fill: #fff;
+        font-size: 26px;
+        font-family: ArialRoundedMTBold, Arial Rounded MT;
+      }
+    </style>
+  </defs>
+  <g id="组_216" data-name="组 216" transform="translate(-1301.722 -611.972)">
+    <path id="减去_4" data-name="减去 4" class="cls-1" d="M17.424,46.088A8.557,8.557,0,0,1,9.05,38.94a1.338,1.338,0,0,1,.283-1.089,1.272,1.272,0,0,1,.983-.469h2.632a1.258,1.258,0,0,1,1.206.922,3.382,3.382,0,0,0,6.66-.922V28.6a10.626,10.626,0,0,0-6.239,2.841,10.809,10.809,0,0,0-8.045-3.906A10.3,10.3,0,0,0,0,29.971L24.613,0C30,.925,34.965,4.355,38.589,9.656A34.527,34.527,0,0,1,44.261,29v1.914A10.553,10.553,0,0,0,36.7,27.531a10.81,10.81,0,0,0-8.045,3.906,11.734,11.734,0,0,0-2.716-1.859v7.556A8.818,8.818,0,0,1,19.207,45.9,8.733,8.733,0,0,1,17.424,46.088Z" transform="translate(1311.989 623.412)"/>
+    <line id="直线_2" data-name="直线 2" class="cls-2" x1="38.428" y2="43.668" transform="translate(1305.25 615.5)"/>
+    <text id="_" data-name="%" class="cls-3" transform="translate(1326.774 649.441)"><tspan x="0" y="0">%</tspan></text>
+  </g>
+</svg>
